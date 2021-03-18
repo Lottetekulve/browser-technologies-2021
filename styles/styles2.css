@@ -1,0 +1,352 @@
+html{
+    color: black;
+    margin-top: 0;
+    padding: 0;
+    background-color: #eeeeee;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+main{
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    grid-template-rows: 350px 350px;
+    grid-gap: 50px;
+}
+
+header{
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ul li en a */
+
+header ul {
+    display: flex;
+    list-style-type: none;
+    border-bottom: 1px solid grey;
+    padding: 15px;
+}
+
+li a{
+    margin: 10px;
+    color: rgb(24, 24, 24);
+    font-weight: lighter;
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+    color: black
+}
+
+
+img{
+    width: 400px;
+    background-color: cadetblue;
+}
+
+
+/* text */
+
+h1{
+    text-align: center;
+}
+
+h2{
+    margin: 40px 0 10px;
+    font-weight: lighter;
+}
+
+
+/* shirt */
+
+article{
+    color: white;
+    margin: 50px;
+    position:relative;
+    width: 200px;
+    height: 250px;
+    background-color: #3f91a5;
+    background-image:
+    radial-gradient(circle at top, #eeeeee 10%, transparent 10%);
+}
+
+/* pan steel  */
+article::after,
+article::before {
+    content:"";
+    position: absolute;
+    width: 120px;
+    height: 70px;
+    top: 12%;
+    transform:translatey(-50%);
+    transform: rotate(40deg);
+    background-color: inherit;
+}
+
+article::before{
+    right: 82%;
+    transform: rotate(140deg);
+}
+
+article::after{
+    left: 82%;
+    transform: rotate(40deg);
+}
+
+article p{ 
+    text-align: center;
+    width: 160px;
+    position: absolute;
+    top: 20%;
+    font-size: 28px;
+    margin: 10px 0;
+    padding: 0 20px;
+}
+
+/* classes voor kleuren shirts uit js */
+
+.blue {
+    background-color: #3f91a5;
+    color: white;
+}
+
+.green {
+    background-color: #3fa575;
+    color: white;
+}
+
+.orange {
+    background-color: #ddaa58;
+    color: white;
+}
+
+.red {
+    background-color: #a53f3f;
+    color: white;
+}
+
+.white {
+    background-color: #ffffff;
+    color: black;
+}
+
+.black {
+    background-color: #000000;
+    color: white;
+}
+
+/* id's voor kleuren buttons */
+
+#blue{
+    background-color: #3f91a5;
+}
+
+#green{
+    background-color: #3fa575;
+}
+
+#orange{
+    background-color: #ddaa58;
+}
+
+#red{
+    background-color: #a53f3f;
+}
+
+#white{
+    background-color: #ffffff;
+    color: black;
+}
+
+#black{
+    background-color: #000000;
+}
+
+
+
+/* forms  */
+
+fieldset{
+    border: none;
+    padding: 0;
+}
+
+form input {
+    width: 80%;
+    height: 25px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 2px 2px 5px #cfcfcf;
+}
+
+fieldset input{
+    display: none;
+}
+
+fieldset label{
+    padding: 10px 20px;
+    font-size: 13.33px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+}
+
+.colors label:hover{
+    box-shadow: 2px 8px 45px rgba(0, 0, 0, 0.15);
+    transform: translate3D(0, -1px, 0);
+}
+
+
+/* buttons */
+
+
+button {
+    width: 80px;
+    padding: 10px 0;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: #313335;
+    margin: 10px 0;
+}
+
+
+button.none{
+    width: 80px;
+    padding: 10px 0;
+    border-radius: 5px;
+    border: #313335 2px solid;
+    color: #313335;
+    background-color: #ffffff;
+    margin: 10px 0 50px 0;
+    font-weight: bolder;
+}
+
+button:hover{
+    box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
+    transform: translate3D(0, -1px, 0);
+}
+
+
+/* active state  */
+.active{
+    color: rgb(24, 24, 24);
+    font-weight: bolder;
+}
+
+
+/* dropdown menu with buttons  */
+
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.drop{
+    background-color: #313335;
+    color: white;
+    border: none;
+    margin-bottom: 0px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute; 
+    z-index: 1;
+}
+
+.dropdown-content label {
+    background-color: #454a50;
+    color: white;
+    display: block;
+    border-radius: 0px;
+    margin: 0;
+    width: 76px;
+    padding: 10px 0;
+    box-shadow: none;
+    text-align: center;
+}
+
+/* hovers voor dropdown  */
+
+form .dropdown-content label:hover {
+    background-color: #3fa575;
+}
+
+form .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+form .dropdown:hover .drop {
+    background-color: #313335;
+}
+
+
+/* Text kleurgeven */
+
+
+
+/* font text  */
+
+.lobster{
+    font-family: 'Lobster Two', cursive;
+}
+
+.roboto{
+    font-family: 'Roboto', sans-serif;
+}
+
+.quicksand{
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+.smaller{
+    font-size: 24px;
+}
+
+.standaard{
+    font-size: 28px;;
+}
+
+.bigger{
+    font-size: 32px;
+}
+
+.regular{
+    font-weight: normal;
+}
+
+.italic{
+    font-style: italic;
+}
+
+.light{
+    font-weight: lighter;
+}
+
+.bold{
+    font-weight: bolder;
+}
+
+.black2{
+    color: black;
+}
+
+.white2{
+    color: white;
+}
+
+.blue2{
+    color: #3f91a5;
+}
+
+.red2{
+    color: #a53f3f;
+}
