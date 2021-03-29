@@ -10,8 +10,7 @@ main{
     max-width: 1000px;
     margin: auto;
     display: grid;
-    grid-template-columns: 400px 1fr;
-    grid-template-rows: 350px 350px;
+    grid-template-columns: 300px;
     grid-gap: 50px;
 }
 
@@ -20,6 +19,23 @@ header{
     padding: 0;
 }
 
+section{
+    grid-row: 2/3;
+    grid-column: 1/2;
+    margin: auto;
+}
+
+@media(min-width: 650px){
+    main{
+        margin: auto;
+        grid-template-columns: 400px 1fr;
+        grid-gap: 50px;
+    }
+    section{
+        grid-row: 1/2;
+        grid-column: 2/3;
+    }
+}
 
 /* ul li en a */
 
@@ -43,12 +59,6 @@ a{
 }
 
 
-img{
-    width: 400px;
-    background-color: cadetblue;
-}
-
-
 /* text */
 
 h1{
@@ -64,6 +74,7 @@ h2{
 /* shirt */
 
 article{
+    grid-column: 1/2;
     color: white;
     margin: 50px;
     position:relative;
@@ -170,6 +181,7 @@ article p{
 
 /* forms  */
 
+
 fieldset{
     border: none;
     padding: 0;
@@ -188,20 +200,79 @@ fieldset input{
     display: none;
 }
 
-fieldset label{
+.colors label{
+    width: 45px;
+    background-color: none
+}
+
+label {
+    text-align: center;
+    margin-top: 20px;
+    display:inline-block;
+    width: 45px;
+    border-radius: 5px;
     padding: 10px 20px;
     font-size: 13.33px;
-    border-radius: 5px;
-    border: none;
+    background-color:  #313335;
     color: white;
 }
 
-.colors label:hover{
+#blue:hover, #green:hover, #orange:hover, #red:hover, #black:hover{
     box-shadow: 2px 8px 45px rgba(0, 0, 0, 0.15);
-    transform: translate3D(0, -1px, 0);
+    background-color: #313335;
+    transform: none;
+}
+
+#white:hover{
+    box-shadow: 2px 8px 45px rgba(0, 0, 0, 0.15);
+    transform: none;
+    background-color: #313335;
+    color:white
+}
+
+.formFit{
+    margin-bottom: 50px;
 }
 
 
+.formFit label {
+    width: 60px;
+    padding: 10px 0;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px 20px;
+    font-size: 13.33px;
+    border: #313335 2px solid;
+    color: #313335;
+    background-color: #ffffff;
+    font-weight: bolder;
+}
+
+label:hover{
+    box-shadow: 2px 8px 45px rgba(0, 0, 0, 0.15);
+    background-color: #313335;
+    color: white;
+    transform: none;
+}
+
+label a:hover{
+    color: white;
+}
+
+
+.formFit input{
+    display: none;
+}
+
+
+input:checked + label {
+    background: #313335;
+    color: white;
+}
+
+input#nameID{
+    margin-top: 20px;
+}
 /* buttons */
 
 
@@ -216,20 +287,8 @@ button {
 }
 
 
-button.none{
-    width: 80px;
-    padding: 10px 0;
-    border-radius: 5px;
-    border: #313335 2px solid;
-    color: #313335;
-    background-color: #ffffff;
-    margin: 10px 0 50px 0;
-    font-weight: bolder;
-}
-
-button:hover{
+label:hover{
     box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
-    transform: translate3D(0, -1px, 0);
 }
 
 
@@ -244,6 +303,21 @@ button:hover{
 
 
 .dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown2{
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown3{
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown4{
     position: relative;
     display: inline-block;
 }
@@ -267,7 +341,7 @@ button:hover{
     display: block;
     border-radius: 0px;
     margin: 0;
-    width: 76px;
+    width: 82px;
     padding: 10px 0;
     box-shadow: none;
     text-align: center;
@@ -284,6 +358,30 @@ form .dropdown:hover .dropdown-content {
 }
 
 form .dropdown:hover .drop {
+    background-color: #313335;
+}
+
+form .dropdown2:hover .dropdown-content {
+    display: block;
+}
+
+form .dropdown2:hover .drop {
+    background-color: #313335;
+}
+
+form .dropdown3:hover .dropdown-content {
+    display: block;
+}
+
+form .dropdown3:hover .drop {
+    background-color: #313335;
+}
+
+form .dropdown4:hover .dropdown-content {
+    display: block;
+}
+
+form .dropdown4:hover .drop {
     background-color: #313335;
 }
 
@@ -350,3 +448,4 @@ form .dropdown:hover .drop {
 .red2{
     color: #a53f3f;
 }
+

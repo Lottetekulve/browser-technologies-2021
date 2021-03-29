@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/styles2.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400&family=Quicksand:wght@300;400;700&family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400&family=Quicksand:wght@300;400;700&family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
     <title>Create t-shirt</title>
 </head>
 <body>
     <header>
         <ul>
-            <li><a href="/">HOME</a></li>
+            <!-- <li><a href="/">HOME</a></li> -->
             <li><a class="active" href="/shirt">NEW T-SHIRT</a></li>
             <li><a href="/signup">SIGN OUT</a></li>
         </ul>   
@@ -19,46 +19,32 @@
     </header>
     <main>
         <article id="shirt" class="">
-            <p class="editor-example" id="screen-name"></p>
+            <p class="editor-example" name="p1" id="screen-name"></p>
         </article>
         <section>
-            <form>
+            <form method="POST" action="/">
                 <h2>T-shirt name</h2>
-                <input type="text" id="tsname" name="tsname">
-            </form>
-            
-          
-            <!-- <button id="blue"> Blue</button>
-            <button id="green">Green</button>
-            <button id="orange">Orange</button>
-            <button id="red">Red</button>
-            <button id="white">White</button>
-            <button id="black">Black</button> -->
+                <p class="editor-example" name="p1" id="screen-name2"></p>
+                <input type="text" id="tsname" name="tsname" class="input2">
+                <fieldset class="colors">
+                    <h2>Color</h2>
+                    <input type="radio" value="blue" name="color" id="blue">
+                    <label for="blue" id="blue">Blue</label>
+                    <input type="radio" value="green" name="color" id="green">
+                    <label for="green" id="green">Green</label>
+                    <input type="radio" value="orange" name="color" id="orange">
+                    <label for="orange" id="orange">Orange</label>
+                    <input type="radio" value="red" name="color" id="red">
+                    <label for="red" id="red">Red</label>
+                    <input type="radio" value="white" name="color" id="white">
+                    <label for="white" id="white">White</label>
+                    <input type="radio" value="black" name="color" id="black">
+                    <label for="black" id="black">Black</label>
+                </fieldset>
 
-            
- <fieldset class="colors">
-    <h2>Color</h2>
-    <input type="radio" value="blue" name="color" id="blue">
-    <label for="blue" id="blue">Blue</label>
-    <input type="radio" value="green" name="color" id="green">
-    <label for="green" id="green">Green</label>
-    <input type="radio" value="orange" name="color" id="orange">
-    <label for="orange" id="orange">Orange</label>
-    <input type="radio" value="red" name="color" id="red">
-    <label for="red" id="red">Red</label>
-    <input type="radio" value="white" name="color" id="white">
-    <label for="white" id="white">White</label>
-    <input type="radio" value="black" name="color" id="black">
-    <label for="black" id="black">Black</label>
- </fieldset>
-    
-
-
-            <form>
                 <h2>Text</h2>
-
                 <div class="dropdown">
-                <button id="font" class="drop">Font</button>
+                <label id="font" class="drop">Font</label>
                 <fieldset class="dropdown-content">
                     <input type="radio" value="lobster" name="font" id="lobster">
                     <label for="lobster" id="lobster">Lobster</label>
@@ -69,8 +55,8 @@
                 </fieldset>
                 </div>
 
-                <div class="dropdown">
-                    <button id="size" class="drop">Size</button>
+                <div class="dropdown2">
+                    <label id="size" class="drop">Size</label>
                     <fieldset class="dropdown-content">
                     <input type="radio" value="smaller" name="size" id="smaller">
                     <label for="smaller" id="smaller">Smaller</label>
@@ -81,8 +67,8 @@
                     </fieldset>
                 </div>
 
-                <div class="dropdown">  
-                <button id="style" class="drop">Style</button>
+                <div class="dropdown3">  
+                <label id="style" class="drop">Style</label>
                 <fieldset class="dropdown-content">
                     <input type="radio" value="regular" name="style" id="regular">
                     <label for="regular" id="regular">Regular</label>
@@ -95,34 +81,33 @@
                 </fieldset>
                 </div>
 
-                <div class="dropdown">  
-                <button id="color" class="drop">Color</button>
+                <div class="dropdown4">  
+                <label id="color" class="drop">Color</label>
                 <fieldset class="dropdown-content">
-                    <input type="radio" value="black2" name="color" id="black2">
+                    <input type="radio" value="black2" name="color2" id="black2">
                     <label for="black2" id="black2">Black</label>
-                    <input type="radio" value="white2" name="color" id="white2">
+                    <input type="radio" value="white2" name="color2" id="white2">
                     <label for="white2" id="white2">White</label>
-                    <input type="radio" value="blue2" name="color" id="blue2">
+                    <input type="radio" value="blue2" name="color2" id="blue2">
                     <label for="blue2" id="blue2">Blue</label>
-                    <input type="radio" value="red2" name="color" id="red2">
+                    <input type="radio" value="red2" name="color2" id="red2">
                     <label for="red2" id="red2">Red</label>
                 </fieldset>
                 </div>
-                
-                <input id="nameID" name="name" type="text">
-                <button id="apply" type="button">Apply</button>
+                    
+                <input id="nameID" name="name" type="text" class="input">
+                <fieldset class="formFit">
+                    <h2>Fit</h2>
+                    <input type="radio" value="men" name="fit" id="men">
+                    <label for="men" id="men">Men</label>
+                    <input type="radio" value="women" name="fit" id="women">
+                    <label for="women" id="women">Women</label>
+                    <input type="radio" value="unisex" name="fit" id="unisex">
+                    <label for="unisex" id="unisex">Unisex</label>
+                </fieldset>    
+                    <button type="submit" formaction="/shirt/order">Order</button>
+                    <button class="storageButton" type="submit" formaction="/">Save</button>
             </form>
-
-            <form>
-                <h2>Fit</h2>
-                <button class="none">Men</button>
-                <button class="none">Women</button>
-                <button class="none" >Unisex</button>
-            </form>
-
-            <button class="none">Save</button>
-            <a href="/shirt/order"><button>Order</button></a>
-
         </section>
     </main>
 <script src="/scripts/script.js"></script>
