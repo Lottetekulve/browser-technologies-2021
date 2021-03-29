@@ -16,21 +16,26 @@ app.use(express.static(path.join(__dirname, "static/public")));
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 app.use(bodyParser.urlencoded({ extended: false }));
-
-
-
-
-
 const mongoose = require('mongoose');
 
+var MongoClient = require('mongodb').MongoClient;
+var uri = "mongodb://kulvel:<M4mgdt8k!>@<hostname>/BrowserTechDB?ssl=true&replicaSet=atlas-1visjx-shard-0&authSource=admin&retryWrites=true&w=majority";
+MongoClient.connect(uri, function(err, client) {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
+
+
+
 //ES6 promise
-mongoose.Promise = global.Promise
+MongoClient.Promise = global.Promise
 //connect to db before running tests
 
 //connect to mongocb
-mongoose.connect('mongodb://localhost/browserTechDB', { useNewUrlParser: true, useUnifiedTopology: true })
+// mongoose.connect('mongodb://localhost/browserTechDB', { useNewUrlParser: true, useUnifiedTopology: true })
 
-mongoose.connection.once('open', function(){
+MongoClient.connection.once('open', function(){
     console.log('Connection has been made')
 }).on('error', function(error){
     console.log("connection error", error)

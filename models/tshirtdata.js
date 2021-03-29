@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const MongoClient = require('mongoose');
 const Schema = mongoose.Schema; 
 
 //create schema and model
@@ -14,6 +14,6 @@ const shirtSchema = new Schema({
     fit: {type:String, default: ""}
 });
 
-const makeShirt = mongoose.model("shirtmaker", shirtSchema);
+const makeShirt = MongoClient.model("shirtmaker", shirtSchema);
 
 module.exports = makeShirt;
