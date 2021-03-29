@@ -104,3 +104,87 @@ const savetoLS2 = () => {
 }
 
 storageButton.addEventListener('click', savetoLS2)
+
+
+
+// // radio buttons opslaan local storage
+storageButton.onclick = function () {
+    const rbs = document.querySelectorAll('input[name="color"]');
+    let SelectedValue;
+for (const rb of rbs)  {
+    if (rb.checked) {
+        SelectedValue = rb.value;
+        break;
+    }
+}
+localStorage.setItem('color', SelectedValue)
+}
+
+// font
+storageButton.onclick = function () {
+    const rbs2 = document.querySelectorAll('input[name="font"]');
+    let SelectedValue2;
+for (const rb2 of rbs2)  {
+    if (rb2.checked) {
+        SelectedValue2 = rb2.value;
+        break;
+    }
+}
+localStorage.setItem('font', SelectedValue2)
+}
+
+// size
+storageButton.onclick = function () {
+    const rbs3 = document.querySelectorAll('input[name="size"]');
+    let SelectedValue3;
+for (const rb3 of rbs3)  {
+    if (rb3.checked) {
+        SelectedValue3 = rb3.value;
+        break;
+    }
+}
+localStorage.setItem('size', SelectedValue3)
+}
+
+// style
+storageButton.onclick = function () {
+    const rbs4 = document.querySelectorAll('input[name="style"]');
+    let SelectedValue4;
+for (const rb4 of rbs4)  {
+    if (rb4.checked) {
+        SelectedValue4 = rb4.value;
+        break;
+    }
+}
+localStorage.setItem('style', SelectedValue4)
+}
+
+// colortext
+storageButton.onclick = function () {
+    const rbs5 = document.querySelectorAll('input[name="color2"]');
+    let SelectedValue5;
+for (const rb5 of rbs5)  {
+    if (rb5.checked) {
+        SelectedValue5 = rb5.value;
+        break;
+    }
+}
+localStorage.setItem('colortext', SelectedValue5)
+}
+
+// // fit
+storageButton.onclick = function () {
+    const rbs6 = document.querySelectorAll('input[name="fit"]');
+    let SelectedValue6;
+for (const rb6 of rbs6)  {
+    if (rb6.checked) {
+        SelectedValue6 = rb6.value;
+        break;
+    }
+}
+localStorage.setItem('fit', SelectedValue6)
+}
+
+
+
+
