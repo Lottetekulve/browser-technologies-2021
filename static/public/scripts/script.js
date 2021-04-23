@@ -69,121 +69,132 @@ function changeTextcolor(event){
 const storageInput = document.querySelector('.input')
 const textp = document.getElementById('screen-name')
 const storageButton = document.querySelector('.storageButton')
-const storageButton2 = document.querySelector('.storageButton')
-const storedInput = localStorage.getItem('name')
+const storedInput = localStorage.getItem('text')
 
 if(storageInput){
     textp.textContent = storedInput
+    storageInput.addEventListener('input', letter => {
+        textp.textContent = letter.target.value
+    }) 
 }
 
-storageInput.addEventListener('input', letter => {
-    textp.textContent = letter.target.value
-}) 
+
 
 const savetoLS = () => {
-    localStorage.setItem('name', textp.textContent)
+    localStorage.setItem('text', textp.textContent)
 }
 
-storageButton.addEventListener('click', savetoLS)
+if(storageButton){
+    storageButton.addEventListener('click', savetoLS)
+}
 
 // nummer 2
 const storageInput2 = document.querySelector('.input2')
 const textp2 = document.getElementById('screen-name2')
-const storedInput2 = localStorage.getItem('tshirt text')
+const storedInput2 = localStorage.getItem('name')
 
 if(storageInput2){
     textp2.textContent = storedInput2
+    storageInput2.addEventListener('input', letter => {
+        textp2.textContent = letter.target.value
+    }) 
 }
-
-storageInput2.addEventListener('input', letter => {
-    textp2.textContent = letter.target.value
-}) 
 
 const savetoLS2 = () => {
-    localStorage.setItem('tshirt text', textp2.textContent)
+    localStorage.setItem('name', textp2.textContent)
 }
 
-storageButton.addEventListener('click', savetoLS2)
+if(storageButton){
+    storageButton.addEventListener('click', savetoLS2)
+}
 
+//color
 
-
-// // radio buttons opslaan local storage
-storageButton.onclick = function () {
+storageButton.addEventListener('click', () => {
     const rbs = document.querySelectorAll('input[name="color"]');
-    let SelectedValue;
+    let selectedValue;
 for (const rb of rbs)  {
     if (rb.checked) {
-        SelectedValue = rb.value;
+        selectedValue = rb.value;
         break;
     }
 }
-localStorage.setItem('color', SelectedValue)
-}
+console.log('set color')
+localStorage.setItem('color', selectedValue)
+})
 
 // font
-storageButton.onclick = function () {
+storageButton.addEventListener('click', () => {
     const rbs2 = document.querySelectorAll('input[name="font"]');
-    let SelectedValue2;
+    let selectedValue2;
 for (const rb2 of rbs2)  {
     if (rb2.checked) {
-        SelectedValue2 = rb2.value;
+        selectedValue2 = rb2.value;
         break;
     }
 }
-localStorage.setItem('font', SelectedValue2)
-}
+console.log('set font')
+localStorage.setItem('font', selectedValue2)
+})
 
 // size
-storageButton.onclick = function () {
+storageButton.addEventListener('click', () => {
     const rbs3 = document.querySelectorAll('input[name="size"]');
-    let SelectedValue3;
+    let selectedValue3;
 for (const rb3 of rbs3)  {
     if (rb3.checked) {
-        SelectedValue3 = rb3.value;
+        selectedValue3 = rb3.value;
         break;
     }
 }
-localStorage.setItem('size', SelectedValue3)
-}
+console.log(selectedValue3)
+localStorage.setItem('size', selectedValue3)
+})
 
 // style
-storageButton.onclick = function () {
+storageButton.addEventListener('click', () => {
     const rbs4 = document.querySelectorAll('input[name="style"]');
-    let SelectedValue4;
+    let selectedValue4;
 for (const rb4 of rbs4)  {
     if (rb4.checked) {
-        SelectedValue4 = rb4.value;
+        selectedValue4 = rb4.value;
         break;
     }
 }
-localStorage.setItem('style', SelectedValue4)
-}
+localStorage.setItem('style', selectedValue4)
+})
 
 // colortext
-storageButton.onclick = function () {
+storageButton.addEventListener('click', () => {
     const rbs5 = document.querySelectorAll('input[name="color2"]');
-    let SelectedValue5;
+    let selectedValue5;
 for (const rb5 of rbs5)  {
     if (rb5.checked) {
-        SelectedValue5 = rb5.value;
+        selectedValue5 = rb5.value;
         break;
     }
 }
-localStorage.setItem('colortext', SelectedValue5)
-}
+localStorage.setItem('colortext', selectedValue5)
+})
 
 // // fit
-storageButton.onclick = function () {
+storageButton.addEventListener('click', () => {
     const rbs6 = document.querySelectorAll('input[name="fit"]');
-    let SelectedValue6;
+    let selectedValue6;
 for (const rb6 of rbs6)  {
     if (rb6.checked) {
-        SelectedValue6 = rb6.value;
+        selectedValue6 = rb6.value;
         break;
     }
 }
-localStorage.setItem('fit', SelectedValue6)
-}
+localStorage.setItem('fit', selectedValue6)
+})
+
+
+
+
+
+
 
 
 
