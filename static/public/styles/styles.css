@@ -41,11 +41,16 @@ img{
 div{
     background-color: white;
     border-radius: 10px;
-    text-align: center;
+    text-align: left;
     width: 350px;
     height: 350px;
     margin: 40px auto;
     box-shadow: 2px 2px 5px #bdbdbd;
+    padding: 15px;
+}
+
+div:nth-child(2){
+    text-align: center;
 }
 
 h1{

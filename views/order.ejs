@@ -18,32 +18,28 @@
     <main>
         <a href="/shirt">back</a>
         <ul>
-            <h2>T-shirt name: <%= name%></h2>
+            <h2 class="nameOrder"></h2>
             <p>Price: €29,99</p>
             <h3>Styles:</h3>
-            <p>Text: <%= text%></p>
-            <p>Color shirt: <%= color%></p>
-            <p>Font: <%= font%></p>
-            <p>Size: <%= size%></p>
-            <p>Style <%= style%></p>
-            <p>Text color: <%= colortext%></p>
-            <p>Fit: <%= fit%></p>
+            <p class="nameOrder"></p>
+            <p class="textOrder"></p>
+            <p class="colorOrder"></p>
+            <p class="fontOrder"></p>
+            <p class="sizeOrder"></p>
+            <p class="styleOrder"></p>
+            <p class="tcolorOrder"></p>
+            <p class="fitOrder"></p>
             <li><p>Amount</p></li>
             <li>
                 <button>1</button>
                 <button>2</button>
                 <button>3</button>
             </li>
-            <li><p>Size</p></li>
-            <li>
-                <button>S</button>
-                <button>M</button>
-                <button>L</button>
-            </li>
             <li class="last"> <button>Order</button></li>
         </ul>
 
     </main>
-    <script src="/scripts/script.js">localStorage</script>
+    <script src="/scripts/script.js"></script>
+    <script src="/scripts/order.js"></script>
 </body>
 </html>

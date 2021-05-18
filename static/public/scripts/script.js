@@ -1,19 +1,39 @@
-// const { text } = require("body-parser");
+const main = document.querySelector("main")
+const articleForShirt = document.createElement("article")
+const textp = document.createElement("p")
+const att = document.createAttribute("id")
+const tekstAtt = document.createAttribute("id")
+const tekstAtt2 = document.createAttribute("class")
+tekstAtt.value = "screen-name";
+tekstAtt2.value = "editor-example";
+att.value = "shirt";
+articleForShirt.setAttributeNode(att);
+textp.setAttributeNode(tekstAtt);
+textp.setAttributeNode(tekstAtt2);
+main.appendChild(articleForShirt)
+articleForShirt.appendChild(textp)
 
-const colorRadios = document.querySelectorAll('.colors input')
-colorRadios.forEach(radio => {
-    radio.addEventListener('change', changeColor)
-})
+//teksten 
+const storageInput = document.querySelector('.input')
+// const textp = document.getElementById('screen-name')
+
+    if(storageInput){
+        storageInput.addEventListener('input', letter => {
+            textp.textContent = letter.target.value
+        }) 
+    }
 
 
-//functie die wordt uitgevoerd wanneer value verandert
-function changeColor(event){
-    document.querySelector('#shirt').removeAttribute("class");
-    document.querySelector('#shirt').classList.add(event.target.value);
+// nummer 2
+const storageInput2 = document.querySelector('.input2')
+const textp2 = document.getElementById('screen-name2')
+
+    if(storageInput2){
+        storageInput2.addEventListener('input', letter => {
+            textp2.textContent = letter.target.value
+        }) 
 }
 
-
-// css styles voor de tekst
 
 //alle radios
 const fontRadios = document.querySelectorAll('.dropdown input')
@@ -36,166 +56,125 @@ color2Radios.forEach(radio => {
     radio.addEventListener('change', changeTextcolor)
 })
 
+const colorRadios = document.querySelectorAll('.colors input')
+colorRadios.forEach(radio => {
+    radio.addEventListener('change', changeColor)
+})
 
 
-//functie die wordt uitgevoerd wanneer value verandert
-function changeFont(event){
-    document.querySelector('#screen-name').classList.remove("lobster", "roboto", "quicksand");
-    document.querySelector('#screen-name').classList.add(event.target.value);
+
+
+// functie die wordt uitgevoerd wanneer value verandert
+function changeColor(event){
+    const kleur = document.querySelector('#shirt')
+    switch (this.value){
+        case 'blue' :
+            kleur.style.backgroundColor = "#3f91a5"
+            break;
+
+        case 'green' :
+            kleur.style.backgroundColor = "#3fa575"
+            break;
+        
+        case 'orange' :
+            kleur.style.backgroundColor = "#ddaa58"
+            break;
+
+        case 'red' :
+            kleur.style.backgroundColor = "#a53f3f"
+            break;
+        
+        case 'white' :
+            kleur.style.backgroundColor = "White"
+            kleur.style.color = "Black"
+        break;
+        
+        case 'black' :
+            kleur.style.backgroundColor = "Black"
+            kleur.style.color = "White"
+            break;
+    }
 }
 
+
+function changeFont(event){
+    const font = document.querySelector('#shirt')
+    switch (this.value){
+        case 'lobster' :
+            font.style.fontFamily = "lobster"
+            break;
+
+        case 'roboto' :
+            font.style.fontFamily = "roboto"
+            break;
+        
+        case 'quicksand' :
+            font.style.fontFamily = "quicksand"
+            break;
+    }
+}
+
+
 function changeSize(event){
-    document.querySelector('#screen-name').classList.remove("smaller", "standaard", "bigger");
-    document.querySelector('#screen-name').classList.add(event.target.value);
+    const size = document.querySelector('#screen-name')
+    switch (this.value){
+        case 'smaller' :
+            size.style.fontSize = "24px"
+            break;
+
+        case 'standaard' :
+            size.style.fontSize = "28px"
+            break;
+        
+        case 'bigger' :
+            size.style.fontSize = "32px"
+            break;
+    }
 }
 
 function changeStyles(event){
-    document.querySelector('#screen-name').classList.remove("regular", "italic", "bold", "light");
-    document.querySelector('#screen-name').classList.add(event.target.value);
+    const styles = document.querySelector('#screen-name')
+    switch (this.value){
+        case 'regular' :
+            styles.style.fontWeight = "normal"
+            break;
+
+        case 'italic' :
+            styles.style.fontStyle = "italic"
+            break;
+        
+        case 'bold' :
+            styles.style.fontWeight = "bold"
+            break;
+
+        case 'light' :
+            styles.style.fontWeight = "light"
+            break;
+    }
 }
+
 
 function changeTextcolor(event){
-    document.querySelector('#screen-name').classList.remove("black2", "white2", "blue2", "red2");
-    document.querySelector('#screen-name').classList.add(event.target.value);
+    const textcolor = document.querySelector('#screen-name')
+    switch (this.value){
+        case 'blue2' :
+            textcolor.style.color = "#3f91a5"
+            break;
+        
+        case 'red2' :
+            textcolor.style.color = "#a53f3f"
+            break;
+        
+        case 'white2' :
+            textcolor.style.color = "White"
+            break;
+        
+        case 'black2' :
+            textcolor.style.color = "Black"
+            break;
+    }
 }
+
+
 
  
-
-
-
-// tekst van input naar p
-// local storage
-
-const storageInput = document.querySelector('.input')
-const textp = document.getElementById('screen-name')
-const storageButton = document.querySelector('.storageButton')
-const storedInput = localStorage.getItem('text')
-
-if(storageInput){
-    textp.textContent = storedInput
-    storageInput.addEventListener('input', letter => {
-        textp.textContent = letter.target.value
-    }) 
-}
-
-
-
-const savetoLS = () => {
-    localStorage.setItem('text', textp.textContent)
-}
-
-if(storageButton){
-    storageButton.addEventListener('click', savetoLS)
-}
-
-// nummer 2
-const storageInput2 = document.querySelector('.input2')
-const textp2 = document.getElementById('screen-name2')
-const storedInput2 = localStorage.getItem('name')
-
-if(storageInput2){
-    textp2.textContent = storedInput2
-    storageInput2.addEventListener('input', letter => {
-        textp2.textContent = letter.target.value
-    }) 
-}
-
-const savetoLS2 = () => {
-    localStorage.setItem('name', textp2.textContent)
-}
-
-if(storageButton){
-    storageButton.addEventListener('click', savetoLS2)
-}
-
-//color
-
-storageButton.addEventListener('click', () => {
-    const rbs = document.querySelectorAll('input[name="color"]');
-    let selectedValue;
-for (const rb of rbs)  {
-    if (rb.checked) {
-        selectedValue = rb.value;
-        break;
-    }
-}
-console.log('set color')
-localStorage.setItem('color', selectedValue)
-})
-
-// font
-storageButton.addEventListener('click', () => {
-    const rbs2 = document.querySelectorAll('input[name="font"]');
-    let selectedValue2;
-for (const rb2 of rbs2)  {
-    if (rb2.checked) {
-        selectedValue2 = rb2.value;
-        break;
-    }
-}
-console.log('set font')
-localStorage.setItem('font', selectedValue2)
-})
-
-// size
-storageButton.addEventListener('click', () => {
-    const rbs3 = document.querySelectorAll('input[name="size"]');
-    let selectedValue3;
-for (const rb3 of rbs3)  {
-    if (rb3.checked) {
-        selectedValue3 = rb3.value;
-        break;
-    }
-}
-console.log(selectedValue3)
-localStorage.setItem('size', selectedValue3)
-})
-
-// style
-storageButton.addEventListener('click', () => {
-    const rbs4 = document.querySelectorAll('input[name="style"]');
-    let selectedValue4;
-for (const rb4 of rbs4)  {
-    if (rb4.checked) {
-        selectedValue4 = rb4.value;
-        break;
-    }
-}
-localStorage.setItem('style', selectedValue4)
-})
-
-// colortext
-storageButton.addEventListener('click', () => {
-    const rbs5 = document.querySelectorAll('input[name="color2"]');
-    let selectedValue5;
-for (const rb5 of rbs5)  {
-    if (rb5.checked) {
-        selectedValue5 = rb5.value;
-        break;
-    }
-}
-localStorage.setItem('colortext', selectedValue5)
-})
-
-// // fit
-storageButton.addEventListener('click', () => {
-    const rbs6 = document.querySelectorAll('input[name="fit"]');
-    let selectedValue6;
-for (const rb6 of rbs6)  {
-    if (rb6.checked) {
-        selectedValue6 = rb6.value;
-        break;
-    }
-}
-localStorage.setItem('fit', selectedValue6)
-})
-
-
-
-
-
-
-
-
-
-

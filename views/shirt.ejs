@@ -11,18 +11,18 @@
 <body>
     <header>
         <ul>
-            <!-- <li><a href="/">HOME</a></li> -->
+            <li><a href="/">HOME</a></li>
             <li><a class="active" href="/shirt">NEW T-SHIRT</a></li>
             <li><a href="/signup">SIGN OUT</a></li>
         </ul>   
         <h1>Create your own t-shirts</h1>
     </header>
     <main>
-        <article id="shirt" class="">
+        <!-- <article id="shirt">
             <p class="editor-example" name="p1" id="screen-name"></p>
-        </article>
+        </article> -->
         <section>
-            <form method="POST" action="/">
+            <form method="get" action="/">
                 <h2>T-shirt name</h2>
                 <p class="editor-example" name="p1" id="screen-name2"></p>
                 <input type="text" id="tsname" name="tsname" class="input2">
@@ -110,6 +110,7 @@
             </form>
         </section>
     </main>
-<script src="/scripts/script.js"></script>
+    <script src="/scripts/script.js"></script>
+    <script src="/scripts/localstorage.js"></script>
 </body>
 </html>
