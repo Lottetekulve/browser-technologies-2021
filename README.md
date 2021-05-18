@@ -76,7 +76,7 @@ Deze laag maakt de ervaring een geheel voor de gebruiker. Bij deze laag ziet de 
 Wanneer de javascript niet werkt of de gebruiker heeft dit zelf uitgezet dan werkt het live updaten niet, wanneer dit gebeurt word het shirt expres niet getoont aan de gebruiker en ervaart de gebruiker deze pleasurable laag niet. De gebruiker weet dan ook niet dat hij iets mist.
 
 #### LocalStorage 
-Het kan dus zijn dat een gebruiker cookies uit heeft staan dan werkt de localstorage niet. Voor localstorage heb ik de volgende code gebruikt om te testen of de gebruiker localStorage beschikbaar heeft: Dit stukje code heb ik gevonden via: https://stackoverflow.com/questions/16427636/check-if-localstorage-is-available :
+Het kan dus zijn dat een gebruiker cookies uit heeft staan dan werkt de localstorage niet. Voor localstorage heb ik de volgende code gebruikt om te testen of de gebruiker localStorage beschikbaar heeft: Dit stukje code heb ik gevonden via: https://stackoverflow.com/questions/16427636/check-if-localstorage-is-available: 
 ```
     function localStorageDetection(){
     const test = 'test';
