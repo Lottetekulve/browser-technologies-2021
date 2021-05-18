@@ -59,15 +59,15 @@ De hoofdfunctionaliteiten zijn het maken en stylen van het shirt. Doormiddel van
 ### De 3 lagen
 
 #### Functional/reliable layer:
-![](./static/public/images/reliable.png)
+![](./static/public/images/1.png)
 Deze laag bevat de core functionaliteiten en moet op alle browsers bereikt kunnen worden. De reliable layer bevat alleen de html forms. De gebruiker kan het formulier invullen en aangeven hoe hij/zij het ontworpen shirt eruit wilt laten zien. Op deze laag kan de gebruiker dus het shirt ontwerpen via een formulier en bestellen. En dit is allemaal mogelijk alleen met html. 
 
 #### Usable layer:
-![](./static/public/images/usable.png)
+![](./static/public/images/2.png)
 Deze laag verbeterd de gebruikerservaring, maakt het fijner voor de gebruiker om de website te gebruiken en voegt de styles toe aan de demo. Bij deze laag is het een stuk beter om naar het ontwerp te kijken. Door styling van het formulier en opfleuren van de webpagina ziet het er minder uit als een formulier, en is het voor de gebruiker fijner te gebruiken.
 
 #### The pleasurable layer
-![](./static/public/images/pleasure.png)
+![](./static/public/images/3.png)
 Deze laag maakt de ervaring een geheel voor de gebruiker. Bij deze laag ziet de gebruiker wanneer hij/zij keuzes maakt over zijn/haar ontwerp meteen de veranderingen bij het shirt. Daarnaast maak ik gebruik van localStorage dus als de gebruiker even weggaat of de pagina refreshed of bijvoorbeeld een stap terug gaat is het formulier nog ingevuld en scheelt dit tijd voor de gebruiker.
 
 
