@@ -77,18 +77,18 @@ Wanneer de javascript niet werkt of de gebruiker heeft dit zelf uitgezet dan wer
 
 #### LocalStorage 
 Het kan dus zijn dat een gebruiker cookies uit heeft staan dan werkt de localstorage niet. Voor localstorage heb ik de volgende code gebruikt om te testen of de gebruiker localStorage beschikbaar heeft: Dit stukje code heb ik gevonden via: https://stackoverflow.com/questions/16427636/check-if-localstorage-is-available :
-    ```
-        function localStorageDetection(){
-        const test = 'test';
-        try {
-            localStorage.setItem(test, test);
-            localStorage.removeItem(test);
-            return true;
-        } catch(e) {
-            return false;
-        } 
-    }
-    ```
+```
+    function localStorageDetection(){
+    const test = 'test';
+    try {
+        localStorage.setItem(test, test);
+        localStorage.removeItem(test);
+        return true;
+    } catch(e) {
+        return false;
+    } 
+}
+```
 
 Wat hierboven gebeurt is een test en gaat kijken of je iets kan toevoegen aan de localstorage zo ja, dan is de test True, als dat niet zo is en het failed dan geeft hij false terug en gaat er niks gebeuren. Dus als de try niet lukt gaat het script naar catch en geeft false aan. En in de if statement eronder geef ik dan aan is de localStorageDetection === true dan kan ik dingen in de localstorage plaatsen.
 
