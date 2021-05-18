@@ -20,7 +20,7 @@ Probleem: Je wilt een nerdy t-shirt genereren, maar helaas is dit nu nog nergens
 Oplossing: Met HTML, CSS en Javascript ben ik aan de slag gegaan om de nerdy tshirt droom waar te maken. Op mijn website kun je niet alleen shirts maken, je kunt ze ook nog eens stylen op wel 6 verschillende manier, wat oneindige mogelijkheden creërt voor je nerdy t-shirt.
 Core functionaliteiten:
 De hoofdfunctionaliteiten zijn het maken en stylen van het shirt. Doormiddel van kleur en tekst. Daarnaast wil je je shirt kunnen bestellen. En wil je natuurlijk je shirts terug kunnen vinden / opslaan om er later mee verder te gaan.
-![](./static/public/images/pleasure.png)
+![](./static/public/images/3.png)
 
 
 ### Moscow
