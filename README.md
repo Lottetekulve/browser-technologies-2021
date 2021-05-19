@@ -48,9 +48,8 @@ De hoofdfunctionaliteiten zijn het maken en stylen van het shirt. Doormiddel van
 
 
 ### Wireflow
-![](./static/public/images/11.png)
-![](./static/public/images/22.png)
-![](./static/public/images/33.png)
+![](./static/public/images/final.png)
+
 
 
 
